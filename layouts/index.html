@@ -7,7 +7,9 @@
 {{ define "main" }}
 
   <div class="intro">
-    <h1>{{ .Title }}</h1>
+    {{ if .Params.image }}
+    <img alt="{{.Params.imageAltAttribute | default "Hero image"}}" src="{{ .Params.image | relURL }}" />
+    {{ end }}
     <h2>{{ .Description }}</h2>
     {{ if .Site.Params.showIntroContentOnHomepage}}
       <div class="intro-content">{{ .Content }}</div>
