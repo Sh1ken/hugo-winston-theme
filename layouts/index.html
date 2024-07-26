@@ -6,12 +6,9 @@
 
 {{ define "main" }}
 
-  {{ if .Site.Params.showAuthorOnHomepage }}
-    {{ partial "author-large.html" . }}
-  {{ end }}
-
   <div class="intro">
-    <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Description }}</h2>
     {{ if .Site.Params.showIntroContentOnHomepage}}
       <div class="intro-content">{{ .Content }}</div>
     {{ end }}
