@@ -19,7 +19,7 @@
 
   {{ if .Site.Params.showPostsOnHomepage }}
 
-    {{ $pages := where .Site.RegularPages "Type" "posts" }}
+    {{ $pages := where .Site.RegularPages "Type" "articulos" }}
     {{ $sorted := ($pages.ByParam "date").Reverse }}
     {{ if .Site.Params.sortPostsByDateOldestFirst }}
       {{ $sorted = $pages.ByParam "date" }}
@@ -37,7 +37,7 @@
       {{ range first $limit $sorted}}
         {{ .Render "summary" }}
       {{ end }}
-      <a class="view-more" href="/posts">Más Artículos</a>
+      <a class="view-more" href="/articulos">Más Artículos</a>
     {{ end }}
   {{ end }}
 
