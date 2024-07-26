@@ -10,7 +10,7 @@
     {{ if .Params.image }}
     <img alt="{{.Params.imageAltAttribute | default "Hero image"}}" src="{{ .Params.image | relURL }}" />
     {{ end }}
-    <h2>{{ .Description }}</h2>
+    <div class="fdr-tagline">{{ .Description }}</div>
     {{ if .Site.Params.showIntroContentOnHomepage}}
       <div class="intro-content">{{ .Content }}</div>
     {{ end }}
