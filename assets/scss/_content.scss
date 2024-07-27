@@ -161,9 +161,17 @@ ul {
 }
 
 .humanmademark {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.humanmademark img {
   max-width: 200px;
-  margin: 0 auto;
-  display: block;
+  display: inline-block;
+}
+
+.humanmademark img {
+  max-width: 180px;
 }
 
 .footnotes {
