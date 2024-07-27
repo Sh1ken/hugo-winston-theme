@@ -1,5 +1,9 @@
 <div class='header'>
-  <a class="header-logo" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+  {{ if .IsHome }}
+    <a class="header-logo" href="{{ .Site.Home.RelPermalink }}"></a>
+  {{ else}}
+    <a class="header-logo" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+  {{ end }}
   <div class="menu-main">
     <ul>
       {{ $currentPage := . }}
