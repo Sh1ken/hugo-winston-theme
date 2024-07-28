@@ -2,7 +2,11 @@
 
 {{ define "main" }}
   <div class="intro">
-    <h1>Categorías</h1>
+    {{ if eq .Title "Tags" }}
+      <h1>Categorías</h1>
+    {{ else }}
+      <h1>{{ .Title }}</h1>
+    {{ end }}
     {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
   </div>
   {{ .Content }}
