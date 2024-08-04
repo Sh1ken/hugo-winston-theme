@@ -16,6 +16,12 @@
     width: 80%;
     font-size: 34px;
     line-height: 38px;
+    text-decoration: underline;
+
+    &:hover {
+        opacity: 0.9; // Change opacity on hover
+    }
+
     @include breakpoint('small') {
       width: 80%;
       font-size: 52px;
